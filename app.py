@@ -20,7 +20,7 @@ app=Flask(__name__)
 Swagger(app)
 
 
-port = int(os.environment.get('PORT', 5000))
+port = int(os.environ.get('PORT', 5000))
 
 @app.route('/')
 def welcome():
