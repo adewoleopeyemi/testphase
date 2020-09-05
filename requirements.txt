@@ -10,4 +10,4 @@ scikit-learn==0.23.1
 matplotlib>=1.4.3
 pandas>=0.19
 flasgger
-tensorflow==2.2.0
+tensorflow
