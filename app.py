@@ -20,7 +20,7 @@ app=Flask(__name__)
 Swagger(app)
 
 
-model = load_model("nudedetectionalgorithm.h5")
+model = load_model("nuditydetectionalgorithm.h5")
 port = int(os.environment.get('PORT', 5000))
 
 @app.route('/')
