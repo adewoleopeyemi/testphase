@@ -22,9 +22,7 @@ Swagger(app)
 
 
 # load model
-path_to_nude_file =
-path_to_nude_file =
-
+model = load_model("nuditydetectionalgorithm.h5")
 
 @app.route('/')
 def welcome():
