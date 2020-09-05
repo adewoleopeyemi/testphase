@@ -15,12 +15,12 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from PIL import Image
 
+from . import train
 
 app=Flask(__name__)
 Swagger(app)
 
 
-model = load_model("nuditydetectionalgorithm.h5")
 port = int(os.environment.get('PORT', 5000))
 
 @app.route('/')
@@ -79,6 +79,8 @@ def predict_image_file():
         200:
             description: The output values
     '''
+    model = load_model("nudedetectionalgorithm.h5")
+
     img=Image.open(request.files.get('file'))
     img=Img.resize((124, 124))
     img = np.array(img)
