@@ -4,7 +4,7 @@ Created on Fri Sep  4 04:07:24 2020
 
 @author: adewole opeyemi
 """
-
+import os
 from flask import Flask, request
 import pandas as pd
 import numpy as np
@@ -21,10 +21,8 @@ app=Flask(__name__)
 Swagger(app)
 
 
-# load model
-path_to_nude_file =
-path_to_nude_file =
-
+model = load_model("nudedetectionalgorithm.h5")
+port = int(os.environment.get('PORT', 5000))
 
 @app.route('/')
 def welcome():
@@ -93,5 +91,4 @@ def predict_image_file():
         return "The uploaded image doesn't contain any form of nudity you look good to go"
 
 if __name__ == '__main__':
-    app.run()
-    #app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=port, debug=True)
