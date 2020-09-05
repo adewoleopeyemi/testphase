@@ -15,7 +15,6 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from PIL import Image
 
-from . import train
 
 app=Flask(__name__)
 Swagger(app)
