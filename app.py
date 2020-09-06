@@ -78,7 +78,7 @@ def predict_image_file():
         200:
             description: The output values
     '''
-    model = load_model("nudedetectionalgorithm.h5")
+    model = load_model("deploytestnudity.h5")
 
     img=Image.open(request.files.get('file'))
     img=Img.resize((124, 124))
