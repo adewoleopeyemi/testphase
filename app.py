@@ -84,7 +84,7 @@ def predict_image_file():
     img=img.resize((124, 124))
     img = np.array(img)
     img = img/255.
-    imgs = imgs.reshape((1, 124, 124, 3))
+    imgs = img.reshape((1, 124, 124, 3))
     prediction = model.predict(img)
     if prediction > 0.5:
         return 'The uploaded image contains nude contents and is not allowed'
